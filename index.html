@@ -7,7 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+  </script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -18,21 +19,43 @@
       grid-template-columns: auto auto;
     }
 
+    .darkMode{
+      border-radius: 50%;
+    }
+
     #followers{
       display:grid;
       grid-template-columns: auto auto auto auto;
+      grid-gap: 20px;
     }
 
-    #likes{
-      display:grid;
-      grid-template-columns: auto auto auto auto;
+    .facebook, .twitter{
+      border-top: rgb(128, 151, 223) solid;
     }
 
-    
-.dark-mode {
-  background-color: #152238;
-  color: white;
-}
+    .youtube{
+      border-top: rgb(192, 13, 13) solid;
+    }
+/* 
+    .instagram{
+  
+    border-top: solid rgb(29, 114, 34);
+   border-image: repeating-linear-gradient( rgb(83, 19, 185), rgb(53, 177, 22) ) 1; 
+
+    } */
+    .followers-group, .likes-group{
+      background-color: #ccccff;
+ 
+  border-radius: 5px;
+   
+
+    }
+
+    .followers-group{
+      text-align: center;
+    }
+   
+   
   </style>
 </head>
 <body>
@@ -43,82 +66,82 @@
     <h6>Total Followers: 23,004</h6>
   </div>
   <div>
-    <button onclick="changeMode()">Dark Mode</button>
+    <button class="darkMode">Dark Mode</button>
   </div>
 </header>
   
 
 <div id="followers">
-  <div>  
-    <p><img src="images/icon-facebook.svg"> @nathanf</p>
+  <div class="followers-group facebook">  
+    <p><img src="images/icon-facebook.svg" alt="facebook"> @nathanf</p>
    
     <h1>1987</h1>
-    <p>Followers</p>
-    <p>12 Today</p>
+    <p>FOLLOWERS</p>
+    <p><img src="images/icon-up.svg" alt="up">12 Today</p>
   </div>
 
-  <div>
-    <p><img src="images/icon-twitter.svg"> @nathanf</p>
+  <div class="followers-group twitter">
+    <p><img src="images/icon-twitter.svg" alt="Twitter"> @nathanf</p>
     <h1>1044</h1>
-    <p>Followers</p>
-    <p>99 Today</p>
+    <p>FOLLOWERS</p>
+    <p><img src="images/icon-up.svg" alt="up">99 Today</p>
   </div>
 
-  <div>
-    <p><img src="images/icon-instagram.svg"> @realnathanf</p>
+  <div class="followers-group instagram">
+    <p><img src="images/icon-instagram.svg" alt="Instagram"> @realnathanf</p>
     <h1>11k</h1>
-    <p>Followers</p>
-    <p>1099 Today</p>
+    <p>FOLLOWERS</p>
+    <p><img src="images/icon-up.svg" alt="up">1099 Today</p>
   </div>
 
-  <div>
-    <p><img src="images/icon-youtube.svg"> Nathan F.</p>
+  <div class="followers-group youtube">
+    <p><img src="images/icon-youtube.svg" alt="YouTube"> Nathan F.</p>
     <h1>8239</h1>
-    <p>Subscribers</p>
-    <p>144 Today</p>
-  </div>
-</div>
-<h2>Overview - Today</h2>
-
-<div id="likes">
-  <div>
-    <p>Page Views <img src="images/icon-facebook.svg"></p>
-    <h2>87</h2><img src="images/icon-up.svg">3%
+    <p>SUBSCRIBERS</p>
+    <p><img src="images/icon-down.svg" alt="down">144 Today</p>
   </div>
 
-  <div>
-    <p>Likes<img src="images/icon-facebook.svg"></p>
-    <h2>52</h2><img src="images/icon-down.svg">2%
+<!--\\\\\ <h2>Overview - Today</h2> -->
+
+
+  <div class="likes-group">
+    <p>Page Views <img src="images/icon-facebook.svg" alt="facebook"></p>
+    <h2>87</h2><img src="images/icon-up.svg" alt="up">3%
   </div>
 
-  <div>
-    <p>Likes<img src="images/icon-instagram.svg"></p>
-    <h2>5462</h2><img src="images/icon-up.svg">2257%
+  <div class="likes-group">
+    <p>Likes<img src="images/icon-facebook.svg" alt="facebook"></p>
+    <h2>52</h2><img src="images/icon-down.svg" alt="down">2%
   </div>
 
-  <div>
-    <p>Profile Views<img src="images/icon-instagram.svg"></p>
-    <h2>52k</h2><img src="images/icon-up.svg">1375%
+  <div class="likes-group">
+    <p>Likes<img src="images/icon-instagram.svg" alt="Instagram"></p>
+    <h2>5462</h2><img src="images/icon-up.svg" alt="up">2257%
   </div>
 
-  <div>
-    <p>Retweets<img src="images/icon-twitter.svg"></p>
-    <h2>117</h2><img src="images/icon-up.svg">303%
+  <div class="likes-group">
+    <p>Profile Views<img src="images/icon-instagram.svg" alt="Instagram"></p>
+    <h2>52k</h2><img src="images/icon-up.svg" alt="up">1375%
+  </div>
+
+  <div class="likes-group">
+    <p>Retweets<img src="images/icon-twitter.svg" alt="Twitter"></p>
+    <h2>117</h2><img src="images/icon-up.svg" alt="up">303%
   </div>
   
-  <div>
-    <p>Likes<img src="images/icon-twitter.svg"></p>
-    <h2>507</h2><img src="images/icon-up.svg">553%
+  <div class="likes-group">
+    <p>Likes<img src="images/icon-twitter.svg" alt="Twitter"></p>
+    <h2>507</h2><img src="images/icon-up.svg" alt="up">553%
   </div>
 
-  <div>
-    <p>Likes<img src="images/icon-youtube.svg"></p>
-    <h2>107</h2><img src="images/icon-down.svg">19%
+  <div class="likes-group">
+    <p>Likes<img src="images/icon-youtube.svg" alt="YouTube"></p>
+    <h2>107</h2><img src="images/icon-down.svg" alt="down">19%
   </div>
     
-  <div>
-    <p>Total Views<img src="images/icon-youtube.svg"></p>
-    <h2>1407</h2><img src="images/icon-down.svg">12%
+  <div class="likes-group">
+    <p>Total Views<img src="images/icon-youtube.svg" alt="YouTube"></p>
+    <h2>1407</h2><img src="images/icon-down.svg" alt="down">12%
   </div>
 </div>
 
