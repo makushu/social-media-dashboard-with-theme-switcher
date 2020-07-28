@@ -1,30 +1,36 @@
+addEventListener('load', () => {
+  const switchDarkMode = document.querySelector('#switch');
+  const cards = document.querySelectorAll('.cards');
 
+  switchDarkMode.addEventListener('click', () => {
+    if (switchDarkMode.checked) {
+      darkMode(cards);
+      return;
+    }
 
-
-
-$(document).ready(function(){
-  $(".darkMode").toggle(
-    function(){$(".likes-group").css({"background-color": "#001a33"});},
-    function(){$(".likes-group").css({"background-color": "#ccccff"});
-   
+    if (!switchDarkMode.checked) {
+      lightMode(cards);
+      return;
+    }
   });
 });
 
+function darkMode(cards) {
+  document.querySelector('body').classList.add('body-dark-mode');
+  document.querySelector('h1').classList.add('dark-mode-text');
+  document.querySelector('h2').classList.add('dark-mode-text');
 
-$(document).ready(function(){
-  $(".darkMode").toggle(
-    function(){$(".followers-group").css({"background-color": "#001a33"});},
-    function(){$(".followers-group").css({"background-color": "#ccccff"});
-  });
-});
+  for (let card of cards) {
+    card.classList.add('dark-mode');
+  }
+}
 
+function lightMode(cards) {
+  document.querySelector('body').classList.remove('body-dark-mode');
+  document.querySelector('h1').classList.remove('dark-mode-text');
+  document.querySelector('h2').classList.remove('dark-mode-text');
 
-$(document).ready(function(){
-  $(".darkMode").toggle(
-    function(){$("body").css({"background-color": "#000066"});},
-    function(){$("body").css({"background-color": "#ffffff"});
-    
-  });
-});
-
-
+  for (let card of cards) {
+    card.classList.remove('dark-mode');
+  }
+}
